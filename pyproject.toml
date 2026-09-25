@@ -1,0 +1,6 @@
+[project]
+name = "f1-analytics"
+version = "0.1.0"
+dependencies = [
+    "kaggle>=1.8.0"
+]
