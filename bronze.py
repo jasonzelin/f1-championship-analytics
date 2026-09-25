@@ -16,7 +16,7 @@ os.chdir(os.environ["REPO_PATH"])
 dotenv.load_dotenv()
 
 data_source_path = os.environ["DATA_SOURCE_PATH"]
-bronze_dir = f"{os.environ['REPO_PATH']}/src/medallion-layers/bronze"
+bronze_dir = f"{os.environ['REPO_PATH']}/src/pipelines/bronze"
 
 spark = SparkSession.builder.getOrCreate()
 
