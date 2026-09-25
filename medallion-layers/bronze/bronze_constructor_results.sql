@@ -4,7 +4,7 @@ SELECT
     *
 FROM
     read_files(
-        '/Workspace/Users/jr9808@gmail.com/data/raw/',
+        '/Workspace/Repos/jr9808@gmail.com/f1-championship-analytics/data/raw/',
         format => 'csv',
         header => true,
         inferSchema => true,
