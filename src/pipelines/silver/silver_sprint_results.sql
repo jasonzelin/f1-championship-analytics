@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS f1_analytics.silver.sprint_results
 AS
 SELECT
-    * EXCEPT(position, time, milliseconds)
+    * EXCEPT(position, time, milliseconds, fastestLap)
     ,TRY_CAST(CONCAT('00:0', REGEXP_REPLACE(time, '\+', '')) AS TIME) AS time
     ,TRY_CAST(milliseconds AS FLOAT) AS milliseconds
     ,TRY_CAST(fastestLap AS INT) AS fastestLap
