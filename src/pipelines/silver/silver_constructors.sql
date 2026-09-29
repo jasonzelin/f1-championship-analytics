@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS f1_analytics.silver.constructurs
+CREATE TABLE IF NOT EXISTS f1_analytics.silver.constructors
 AS
 SELECT
     *
