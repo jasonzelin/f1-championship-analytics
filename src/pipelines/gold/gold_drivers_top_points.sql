@@ -5,12 +5,12 @@ SELECT
     ,d.forename
     ,d.surname
     ,d.nationality
-    ,SUM(points) AS total_points
+    ,points AS total_points
 FROM
     f1_analytics.silver.driver_standings ds
     LEFT JOIN f1_analytics.silver.drivers d ON ds.driverId = d.driverId
-GROUP BY
-    d.driverId
-    ,d.forename
-    ,d.surname
-    ,d.nationality
+QUALIFY
+    ROW_NUMBER() OVER(
+        PARTITION BY d.driverId
+        ORDER BY ds.raceId DESC
+    ) = 1
