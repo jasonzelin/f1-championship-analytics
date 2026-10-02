@@ -10,6 +10,6 @@ FROM
     LEFT JOIN f1_analytics.silver.constructors c ON cs.constructorId = c.constructorId
 QUALIFY
     ROW_NUMBER() OVER(
-        PARTITION BY c.constructor
+        PARTITION BY c.constructorId
         ORDER BY cs.raceId DESC
     ) = 1
