@@ -11,5 +11,5 @@ SELECT
     ) AS cumulative_points
 FROM
     f1_analytics.gold.gold_constructors_top_80_percentile p
-    LEFT JOIN f1_analytics.silver.results r ON p.constructorId = r.constructorId    
+    LEFT JOIN f1_analytics.silver.constructor_results r ON p.constructorId = r.constructorId    
     LEFT JOIN f1_analytics.silver.races ra ON r.raceId = ra.raceId
