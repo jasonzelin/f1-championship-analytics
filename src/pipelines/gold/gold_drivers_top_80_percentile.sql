@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS f1_analytics.gold.gold_drivers_top_80_percentile
+CREATE OR REPLACE TABLE f1_analytics.gold.gold_drivers_top_80_percentile
 AS
 WITH drivers_with_points AS (
     SELECT

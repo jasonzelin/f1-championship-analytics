@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS f1_analytics.gold.gold_constructors_top_80_percentile_points_time_series
+CREATE OR REPLACE TABLE f1_analytics.gold.gold_constructors_top_80_percentile_points_time_series
 AS
 SELECT
     p.constructorId

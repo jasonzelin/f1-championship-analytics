@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS f1_analytics.gold.gold_drivers_top_points
+CREATE OR REPLACE TABLE f1_analytics.gold.gold_drivers_top_points
 AS
 SELECT
     d.driverId
