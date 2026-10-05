@@ -6,10 +6,11 @@ WITH drivers_with_points AS (
         ,d.forename
         ,d.surname
         ,d.nationality
-        ,SUM(points) AS total_points
+        ,SUM(r.points) AS total_points
     FROM
-        f1_analytics.silver.driver_standings ds
-        LEFT JOIN f1_analytics.silver.drivers d ON ds.driverId = d.driverId
+        f1_analytics.silver.results r
+        LEFT JOIN f1_analytics.silver.drivers d ON r.driverId = d.driverId
+        LEFT JOIN f1_analytics.silver.races ra ON r.raceId = ra.raceId
     GROUP BY
         d.driverId
         ,d.forename
